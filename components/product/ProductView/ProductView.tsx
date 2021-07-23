@@ -70,7 +70,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                 className="animated fadeIn bg-accent-0 border border-accent-2"
               >
                 <ProductCard
-                  noNameTag
+                  // noNameTag
                   product={p}
                   key={p.path}
                   variant="simple"

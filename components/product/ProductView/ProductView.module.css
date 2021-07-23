@@ -13,11 +13,15 @@
 }
 
 .sliderContainer {
-  @apply flex items-center justify-center overflow-x-hidden bg-violet;
+  @apply flex items-center justify-center overflow-x-hidden ;
 }
 
+/* ORIGINAL .sliderContainer {
+  @apply flex items-center justify-center overflow-x-hidden bg-violet;
+} */
+
 .imageContainer {
-  @apply text-center;
+  @apply text-center p-8;
 }
 
 .imageContainer > div,
@@ -43,11 +47,11 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-12;
+    @apply grid-cols-8;
   }
 
   .main {
-    @apply mx-0 col-span-8;
+    @apply mx-0 col-span-4;
   }
 
   .sidebar {
