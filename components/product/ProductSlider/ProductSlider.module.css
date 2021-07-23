@@ -29,9 +29,11 @@
 }
 
 .album {
+  display: flex;
+  justify-content: center;;
   width: 100%;
   height: 100%;
-  @apply bg-violet-dark;
+  /* @apply bg-violet-dark; */
   box-sizing: content-box;
   overflow-y: hidden;
   overflow-x: auto;
