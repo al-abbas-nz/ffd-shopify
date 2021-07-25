@@ -1,3 +1,5 @@
+const { url } = require('inspector');
+
 module.exports = {
   future: {
     purgeLayersByDefault: true,
@@ -63,6 +65,9 @@ module.exports = {
       scale: {
         120: '1.2',
       },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('public/assets/FFDHERO.jpg')"
+      }),
     },
   },
 }
