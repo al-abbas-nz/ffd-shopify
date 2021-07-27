@@ -12,7 +12,7 @@ interface Props {
   product: Product
   noNameTag?: boolean
   imgProps?: Omit<ImageProps, 'src' | 'layout' | 'placeholder' | 'blurDataURL'>
-  variant?: 'default' | 'slim' | 'simple'
+  variant?: 'default' | 'slim' | 'simple' | 'simple2'
 }
 
 const placeholderImg = '/product-img-placeholder.svg'
@@ -60,7 +60,7 @@ const ProductCard: FC<Props> = ({
         )}
 
         {variant === 'simple' && (
-          <>
+          <div className={s.productCard}>
             {process.env.COMMERCE_WISHLIST_ENABLED && (
               <WishlistButton
                 className={s.wishlistButton}
@@ -93,7 +93,7 @@ const ProductCard: FC<Props> = ({
                 />
               )}
             </div>
-          </>
+          </div>
         )}
 
         {variant === 'default' && (
@@ -125,6 +125,33 @@ const ProductCard: FC<Props> = ({
             </div>
           </>
         )}
+
+        {/* NEW CARD */}
+        {/* {variant === 'simple2' && (
+          <div className="w-full flex justify-center items-center">
+            <div className="w-full p-4">
+              <div className="card flex flex-col justify-center p-10 bg-white rounded-lg shadow-2xl">
+                <div className="prod-title">
+                  <p className="text-l uppercase font-bold">{product.name}</p>
+                </div>
+                <div className={s.imageContainer}>
+                  {product?.images && (
+                    <Image
+                      alt={product.name || 'Product Image'}
+                      className={s.productImage}
+                      src={product.images[0]?.url || placeholderImg}
+                      height={540}
+                      width={540}
+                      quality="85"
+                      layout="responsive"
+                      {...imgProps}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )} */}
       </a>
     </Link>
   )

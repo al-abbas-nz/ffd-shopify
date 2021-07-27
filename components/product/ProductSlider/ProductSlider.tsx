@@ -84,14 +84,20 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
   const onPrev = React.useCallback(() => slider.prev(), [slider])
   const onNext = React.useCallback(() => slider.next(), [slider])
 
+  const refObject = ref
+
   return (
     <div className={cn(s.root, className)} ref={sliderContainerRef}>
       <div
         ref={ref}
         className={cn(s.slider, { [s.show]: isMounted }, 'keen-slider')}
       >
-        {slider && <ProductSliderControl onPrev={onPrev} onNext={onNext} />}
-        {console.log(sliderContainerRef)}
+        {refObject.current?.childElementCount >= 2 ? (
+          <ProductSliderControl onPrev={onPrev} onNext={onNext} />
+        ) : (
+          ''
+        )}
+        {/* {console.log(ref.current?.childElementCount)} */}
         {Children.map(children, (child) => {
           // Add the keen-slider__slide className to children
           if (isValidElement(child)) {

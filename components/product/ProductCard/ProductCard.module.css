@@ -5,6 +5,8 @@
   height: 100% !important;
 }
 
+
+
 .root:hover {
   & .productImage {
     transform: scale(1.2625);
@@ -43,7 +45,7 @@
 
 .header {
   @apply transition-colors ease-in-out duration-500
-  absolute top-0 left-0 z-20 pr-16;
+  absolute top-0 left-0 z-20;
 }
 
 .header .name {
@@ -87,7 +89,7 @@
 
 /* Variant Simple */
 .simple .header .name {
-  @apply pt-2 text-lg leading-10 -mt-1;
+  @apply pt-2 text-sm leading-10 -mt-1;
 }
 
 .simple .header .price {
