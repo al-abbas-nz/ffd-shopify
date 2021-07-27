@@ -10,7 +10,7 @@ import {
   SelectedOptions,
 } from '../helpers'
 import usePrice from '@commerce/product/use-price'
-// import ProductTag from '../ProductTag'
+import ProductTag from '../ProductTag'
 
 interface ProductSidebarProps {
   product: Product
@@ -42,25 +42,24 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
     }
   }
 
-  // const { price } = usePrice({
-  //   amount: product.price.value,
-  //   baseAmount: product.price.retailPrice,
-  //   currencyCode: product.price.currencyCode!,
-  // })
+  const { price } = usePrice({
+    amount: product.price.value,
+    baseAmount: product.price.retailPrice,
+    currencyCode: product.price.currencyCode!,
+  })
 
   return (
     <div className={className}>
-      {/* <ProductTag
-        name={product.name}
-        price={`${price} ${product.price?.currencyCode}`}
-        fontSize={32}
-      /> */}
+      <Text variant="heading" html={product.name} />
+      <Text
+        variant="sectionHeading"
+        html={`$${product.price.value}` + ` ${product.price.currencyCode}`}
+      />
       <ProductOptions
         options={product.options}
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
       />
-
       <Text
         className="pb-4 break-words w-full max-w-xl"
         html={product.descriptionHtml || product.description}
