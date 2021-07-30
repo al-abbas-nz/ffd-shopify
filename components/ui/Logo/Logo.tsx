@@ -3,8 +3,8 @@ const Logo = ({ className = '', ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 17"
-      height="100%"
-      width="100%"
+      width="200"
+      // height="100"
       className={className}
       {...props}
     >

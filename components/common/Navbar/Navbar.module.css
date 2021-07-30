@@ -26,10 +26,10 @@
 }
 
 .logo {
-  @apply cursor-pointer transform duration-100 ease-in-out;
+  @apply cursor-pointer;
 
   &:hover {
     /* @apply shadow-md; */
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 }
