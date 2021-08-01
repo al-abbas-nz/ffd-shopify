@@ -3,7 +3,6 @@ import { Container } from '@components/ui'
 import { ArrowRight } from '@components/icons'
 import s from './Hero.module.css'
 import Link from 'next/link'
-import getSiteCollectionsQuery from '../../'
 // import Image from 'next/image'
 // import heroImage from '../../../public/assets/FFDHERO.jpg'
 interface HeroProps {
