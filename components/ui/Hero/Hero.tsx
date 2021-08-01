@@ -3,12 +3,13 @@ import { Container } from '@components/ui'
 import { ArrowRight } from '@components/icons'
 import s from './Hero.module.css'
 import Link from 'next/link'
+import getSiteCollectionsQuery from '../../'
 // import Image from 'next/image'
 // import heroImage from '../../../public/assets/FFDHERO.jpg'
 interface HeroProps {
   className?: string
-  headline: string
-  description: string
+  headline?: string
+  description?: string
 }
 
 const Hero: FC<HeroProps> = ({ headline, description }) => {
@@ -19,12 +20,12 @@ const Hero: FC<HeroProps> = ({ headline, description }) => {
           <h2 className={s.title}>{headline}</h2>
           <div className={s.description}>
             <p>{description}</p>
-            <Link href="/search">
+            {/* <Link href="/search">
               <a className="flex items-center text-accent-0 pt-3 font-bold hover:underline cursor-pointer w-max-content">
                 View the catalogue here
                 <ArrowRight width="20" heigh="20" className="ml-1" />
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </Container>

@@ -189,9 +189,11 @@ export const normalizeCategory = ({
   title: name,
   handle,
   id,
+  description
 }: Collection): Category => ({
   id,
   name,
   slug: handle,
   path: `/${handle}`,
+  description: description
 })
