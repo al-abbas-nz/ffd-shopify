@@ -26,18 +26,18 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
           </Link> */}
           <nav className={s.navMenu}>
             <Link href="/search">
-              <a className={s.link}>All</a>
+              <a className={s.link}>All Products</a>
             </Link>
 
             {/* FILTER ONLY RELEVANT LINKS */}
-            {links
-              ?.filter((l) => l.label == 'Home Page')
+            {/* {links
+              ?.filter((l) => l.label == 'Home page')
               .map((l) => (
                 <Link href={l.href} key={l.href}>
                   <a className={s.link}>{l.label}</a>
                 </Link>
-              ))}
-            {console.log(links)}
+              ))} */}
+            {/* {console.log(links)} */}
           </nav>
         </div>
         {/* {process.env.COMMERCE_SEARCH_ENABLED && (
