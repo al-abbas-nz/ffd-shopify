@@ -4,6 +4,7 @@ import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 
 export async function getStaticProps({
   preview,
@@ -37,6 +38,8 @@ export async function getStaticProps({
 
 export default function Home({
   products,
+  categories,
+  brands,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -44,7 +47,7 @@ export default function Home({
         headline=""
         description="Fat Freddy's Drop Official NZ Merch Store."
       />
-      <Grid variant="default">
+      {/* <Grid variant="default">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             variant="simple"
@@ -56,7 +59,7 @@ export default function Home({
             }}
           />
         ))}
-      </Grid>
+      </Grid> */}
       {/* <Marquee variant="secondary">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
@@ -80,11 +83,11 @@ export default function Home({
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
       </Marquee> */}
-      {/* <HomeAllProductsGrid
-        newestProducts={products}
+      <HomeAllProductsGrid
+        products={products}
         categories={categories}
         brands={brands}
-      /> */}
+      />
     </>
   )
 }
