@@ -66,7 +66,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
     (category) => category.name == "Fat Freddy's Drop"
   )
 
-  const fatFreddysDropDescription = fatFreddysDropObject?.description
+  const fatFreddysDropDescription = fatFreddysDropObject?.descriptionHtml
 
   console.log(fatFreddysDropObject)
   return (
@@ -143,33 +143,35 @@ export default function Search({ categories, brands }: SearchPropsType) {
                           </a>
                         </Link>
                       </li>
-                      {categories.map((cat: any) => (
-                        <li
-                          key={cat.path}
-                          className={cn(
-                            'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
-                            {
-                              underline: activeCategory?.id === cat.id,
-                            }
-                          )}
-                        >
-                          <Link
-                            href={{
-                              pathname: getCategoryPath(cat.path, brand),
-                              query,
-                            }}
-                          >
-                            <a
-                              onClick={(e) => handleClick(e, 'categories')}
-                              className={
-                                'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
+                      {categories
+                        .filter((cat: any) => cat.name !== "Fat Freddy's Drop")
+                        .map((cat: any) => (
+                          <li
+                            key={cat.path}
+                            className={cn(
+                              'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                              {
+                                underline: activeCategory?.id === cat.id,
                               }
+                            )}
+                          >
+                            <Link
+                              href={{
+                                pathname: getCategoryPath(cat.path, brand),
+                                query,
+                              }}
                             >
-                              {cat.name}
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
+                              <a
+                                onClick={(e) => handleClick(e, 'categories')}
+                                className={
+                                  'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
+                                }
+                              >
+                                {cat.name}
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>

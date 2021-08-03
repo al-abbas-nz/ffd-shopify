@@ -33,11 +33,11 @@ export const handler: SWRHook<SearchProductsHook> = {
     query: getAllProductsQuery,
   },
   async fetcher({ input, options, fetch }) {
+    console.log('yo: ' + options.query)
     const { categoryId, brandId } = input
     const method = options?.method
     const variables = getSearchVariables(input)
     let products
-
     // change the query to getCollectionProductsQuery when categoryId is set
     if (categoryId) {
       const data = await fetch<
@@ -62,6 +62,7 @@ export const handler: SWRHook<SearchProductsHook> = {
         variables,
       })
       products = data.products?.edges
+      console.log(data)
     }
 
     return {

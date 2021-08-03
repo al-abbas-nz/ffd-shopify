@@ -7,6 +7,7 @@ const getSiteCollectionsQuery = /* GraphQL */ `
           title
           handle
           description
+          descriptionHtml
         }
       }
     }

@@ -8,6 +8,7 @@ export const productConnectionFragment = /* GraphQL */ `
       node {
         id
         title
+        tags
         vendor
         handle
         priceRange {
@@ -34,19 +35,18 @@ export const productConnectionFragment = /* GraphQL */ `
     }
   }
 `
-
 const getAllProductsQuery = /* GraphQL */ `
   query getAllProducts(
-    $first: Int = 250
-    $query: String = ""
-    $sortKey: ProductSortKeys = RELEVANCE
-    $reverse: Boolean = false
+    $first: Int = 100
+    # $query: String = ""
+    $sortKey: ProductSortKeys = ID
+    $reverse: Boolean = true
   ) {
     products(
       first: $first
       sortKey: $sortKey
       reverse: $reverse
-      query: $query
+      query: "tag:Artists/Fat Freddy's Drop"
     ) {
       ...productConnection
     }
@@ -54,4 +54,5 @@ const getAllProductsQuery = /* GraphQL */ `
 
   ${productConnectionFragment}
 `
+
 export default getAllProductsQuery

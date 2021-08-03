@@ -4,6 +4,7 @@ export type Category = {
   slug: string
   path: string
   description: string
+  descriptionHtml?: string
 }
 
 export type Brand = any

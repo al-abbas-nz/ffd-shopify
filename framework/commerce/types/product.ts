@@ -90,6 +90,7 @@ export type GetAllProductsOperation<T extends ProductTypes = ProductTypes> = {
     relevance?: 'featured' | 'best_selling' | 'newest'
     ids?: string[]
     first?: number
+    query?: string
   }
 }
 

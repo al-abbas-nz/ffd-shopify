@@ -7,6 +7,7 @@ const getProductQuery = /* GraphQL */ `
       title
       productType
       vendor
+      tags
       description
       descriptionHtml
       options {
