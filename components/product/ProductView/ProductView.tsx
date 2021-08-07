@@ -9,6 +9,7 @@ import { WishlistButton } from '@components/wishlist'
 import { ProductSlider, ProductCard } from '@components/product'
 import { Container, Text } from '@components/ui'
 import ProductSidebar from '../ProductSidebar'
+
 // import ProductTag from '../ProductTag'
 interface ProductViewProps {
   product: Product
@@ -63,27 +64,30 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
         </div>
         <hr className="mt-7 border-accent-2" />
         <section className="py-12 px-6 mb-10">
-          <Text variant="sectionHeading">Related Products</Text>
+          <Text variant="sectionHeading">Browse More</Text>
           <div className={s.relatedProductsGrid}>
-            {console.log(relatedProducts)}
-            {relatedProducts.map((p) => (
-              <div
-                key={p.path}
-                className="animated fadeIn bg-accent-0 border border-accent-2"
-              >
-                <ProductCard
-                  // noNameTag
-                  product={p}
+            {/* relatedProducts comes from the query in [slug] */}
+            {relatedProducts
+              .sort(() => Math.random() - 0.5)
+              .slice(0, 4)
+              .map((p) => (
+                <div
                   key={p.path}
-                  variant="simple"
-                  className="animated fadeIn"
-                  imgProps={{
-                    width: 300,
-                    height: 300,
-                  }}
-                />
-              </div>
-            ))}
+                  className="animated fadeIn bg-accent-0 border border-accent-2"
+                >
+                  <ProductCard
+                    // noNameTagtr
+                    product={p}
+                    key={p.path}
+                    variant="simple"
+                    className="animated fadeIn"
+                    imgProps={{
+                      width: 300,
+                      height: 300,
+                    }}
+                  />
+                </div>
+              ))}
           </div>
         </section>
       </Container>

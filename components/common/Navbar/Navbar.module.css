@@ -1,6 +1,6 @@
 .root {
-  @apply border-b-2 border-black sticky top-0 bg-primary z-40 transition-all duration-150;
-  min-height: 74px;
+  @apply border-b-2 border-gray-800 sticky top-0 bg-primary z-40 transition-all duration-150;
+  min-height: 50px;
 }
 
 .nav {
@@ -26,7 +26,9 @@
 }
 
 .logo {
-  @apply cursor-pointer;
+  @apply cursor-pointer w-80;
+  filter: invert(100%);
+  /* width: 35%; */
 
   &:hover {
     /* @apply shadow-md; */

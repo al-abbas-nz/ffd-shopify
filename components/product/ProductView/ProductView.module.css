@@ -20,7 +20,7 @@
 } */
 
 .imageContainer {
-  @apply text-center sm:p-2 lg:p-6 2xl:p-8;
+  @apply relative text-center sm:p-2 lg:p-6 2xl:p-8;
 }
 
 .imageContainer > div,

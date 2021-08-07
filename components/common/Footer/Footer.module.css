@@ -11,3 +11,7 @@
     @apply scale-110;
   }
 }
+
+.socialIcon {
+  @apply w-10;
+}

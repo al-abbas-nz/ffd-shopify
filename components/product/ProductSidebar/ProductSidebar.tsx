@@ -55,21 +55,6 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         variant="sectionHeading"
         html={`$${product.price.value}` + ` ${product.price.currencyCode}`}
       />
-      <ProductOptions
-        options={product.options}
-        selectedOptions={selectedOptions}
-        setSelectedOptions={setSelectedOptions}
-      />
-      <Text
-        className="pb-4 break-words w-full max-w-xl"
-        html={product.descriptionHtml || product.description}
-      />
-
-      {/* //do not need */}
-      {/* <div className="flex flex-row justify-between items-center">
-        <Rating value={4} />
-        <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
-      </div> */}
       <div>
         {process.env.COMMERCE_CART_ENABLED && (
           <Button
@@ -86,6 +71,21 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           </Button>
         )}
       </div>
+      <ProductOptions
+        options={product.options}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
+      />
+      <Text
+        className="pb-4 break-words w-full max-w-xl"
+        html={product.descriptionHtml || product.description}
+      />
+
+      {/* //do not need */}
+      {/* <div className="flex flex-row justify-between items-center">
+        <Rating value={4} />
+        <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
+      </div> */}
 
       {/* do not need */}
       {/* <div className="mt-6">

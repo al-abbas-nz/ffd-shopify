@@ -54,7 +54,8 @@
 }
 
 .button {
-  width: 100%;
+  @apply flex justify-center text-center mt-2 mb-2 m-auto p-2 bg-violet hover:bg-blue;
+  width: 50%;
 }
 
 .wishlistButton {

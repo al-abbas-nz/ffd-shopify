@@ -1,5 +1,5 @@
 .control {
-  @apply bg-violet opacity-75 absolute bottom-10 right-10 flex flex-row
+  @apply bg-violet opacity-75 absolute bottom-0 right-0 flex flex-row
   border-accent-0 border text-accent-0 z-30  select-none;
   height: 48px;
 }
