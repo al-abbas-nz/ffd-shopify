@@ -52,6 +52,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
     <div className={className}>
       <Text variant="heading" html={product.name} />
       <Text
+        className={s.price}
         variant="sectionHeading"
         html={`$${product.price.value}` + ` ${product.price.currencyCode}`}
       />

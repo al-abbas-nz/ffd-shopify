@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { Page } from '@commerce/types/page'
 import getSlug from '@lib/get-slug'
-// import { Github, Vercel } from '@components/icons'
 import {
   Bandcamp,
   Facebook,
@@ -15,9 +14,9 @@ import {
   Youtube,
 } from '@icons-pack/react-simple-icons'
 import { Container } from '@components/ui'
-// import { I18nWidget } from '@components/common'
 
 import s from './Footer.module.css'
+import DropdownMenu from '../UserNav/DropdownMenu'
 
 interface Props {
   className?: string
@@ -58,7 +57,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             </div>
           </div>
           <div className="col-span-1 lg:col-span-2 flex justify-center text-primary">
-            <div className="flex space-x-2 justify-center h-10">
+            <div className="pt-5 flex space-x-2 justify-center h-10">
               <a
                 href="https://www.facebook.com/fatfreddysdropnz"
                 rel="noopener noreferrer"

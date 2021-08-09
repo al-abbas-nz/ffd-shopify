@@ -1,5 +1,6 @@
 .body {
   @apply text-base leading-7 max-w-6xl mx-auto;
+  
 }
 
 .heading {
@@ -13,3 +14,12 @@
 .sectionHeading {
   @apply text-xl font-semibold tracking-wide flex justify-center;
 }
+
+/* hide hero image on mobile devices */
+@media (max-width:629px) {
+.body > div > img {
+    display: none;
+  }
+}
+
+

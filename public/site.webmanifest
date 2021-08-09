@@ -1,7 +1,7 @@
 {
-  "name": "Next.js Commerce",
-  "short_name": "Next.js Commerce",
-  "description": "Next.js Commerce -> https://www.nextjs.org/commerce",
+  "name": "Fat Freddy's Drop NZ Merch Shop",
+  "short_name": "Fat Freddy's Drop NZ",
+  "description": "Fat Freddy's Drop NZ Merch Shop",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

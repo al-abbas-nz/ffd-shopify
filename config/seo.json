@@ -1,26 +1,26 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "Fat Freddy's Drop | NZ Merch Store",
+  "titleTemplate": "%s - Fat Freddy's Drop",
+  "description": "Fat Freddy's Drop NZ Merch Store | Vinyl, CDs, Merch & Apparel",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "Fat Freddy's Drop | NZ Merch Store",
+    "description": "Fat Freddy's Drop NZ Merch Store",
     "type": "website",
-    "locale": "en_IE",
-    "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "locale": "en_NZ",
+    "url": "TODO",
+    "site_name": "Fat Freddy's Drop | NZ Merch Store",
     "images": [
       {
         "url": "/card.png",
-        "width": 800,
-        "height": 600,
-        "alt": "Next.js Commerce"
+        "width": 512,
+        "height": 235,
+        "alt": "Fat Freddy's Drop Neon Logo"
       }
     ]
   },
   "twitter": {
-    "handle": "@nextjs",
-    "site": "@nextjs",
+    "handle": "@fatfreddysdrop1",
+    "site": "https://twitter.com/fatfreddysdrop1",
     "cardType": "summary_large_image"
   }
 }

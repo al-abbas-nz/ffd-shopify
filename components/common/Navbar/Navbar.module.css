@@ -26,7 +26,7 @@
 }
 
 .logo {
-  @apply cursor-pointer w-80;
+  @apply cursor-pointer w-72;
   filter: invert(100%);
   /* width: 35%; */
 
