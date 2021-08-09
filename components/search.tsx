@@ -85,7 +85,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                     type="button"
                     onClick={(e) => handleClick(e, 'categories')}
                     className="flex justify-between w-full rounded-sm border border-accent-6 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-6 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
-                    id="options-menu"
+                    id="categories-options-menu"
                     aria-haspopup="true"
                     aria-expanded="true"
                   >
@@ -118,7 +118,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                   <div
                     role="menu"
                     aria-orientation="vertical"
-                    aria-labelledby="options-menu"
+                    aria-labelledby="categories-options-menu"
                   >
                     <ul>
                       <li
@@ -361,7 +361,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                     type="button"
                     onClick={(e) => handleClick(e, 'sort')}
                     className="flex justify-between w-full rounded-sm border border-accent-6 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-6 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
-                    id="options-menu"
+                    id="sort-options-menu"
                     aria-haspopup="true"
                     aria-expanded="true"
                   >
@@ -392,7 +392,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                   <div
                     role="menu"
                     aria-orientation="vertical"
-                    aria-labelledby="options-menu"
+                    aria-labelledby="sort-options-menu"
                   >
                     <ul>
                       <li
