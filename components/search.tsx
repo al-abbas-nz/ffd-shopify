@@ -120,8 +120,9 @@ export default function Search({ categories, brands }: SearchPropsType) {
                     aria-orientation="vertical"
                     aria-labelledby="categories-options-menu"
                   >
-                    <ul>
+                    <ul role="menu">
                       <li
+                        role="menuitem"
                         className={cn(
                           'block text-sm leading-5 text-accent-6 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                           {
@@ -146,6 +147,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                         .filter((cat: any) => cat.name !== "Fat Freddy's Drop")
                         .map((cat: any) => (
                           <li
+                            role="menuitem"
                             key={cat.path}
                             className={cn(
                               'block text-sm leading-5 text-accent-6 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
@@ -394,8 +396,9 @@ export default function Search({ categories, brands }: SearchPropsType) {
                     aria-orientation="vertical"
                     aria-labelledby="sort-options-menu"
                   >
-                    <ul>
+                    <ul role="menu">
                       <li
+                        role="menuitem"
                         className={cn(
                           'block text-sm leading-5 text-accent-6 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                           {
@@ -416,6 +419,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                       </li>
                       {SORT.map(([key, text]) => (
                         <li
+                          role="menuitem"
                           key={key}
                           className={cn(
                             'block text-sm leading-5 text-accent-6 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
