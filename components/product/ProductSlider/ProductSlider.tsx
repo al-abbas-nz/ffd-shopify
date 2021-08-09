@@ -95,7 +95,6 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
         ) : (
           ''
         )}
-        {console.log(children)}
         {Children.map(children, (child) => {
           // Add the keen-slider__slide className to children
           if (isValidElement(child)) {

@@ -37,7 +37,6 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
                   <a className={s.link}>{l.label}</a>
                 </Link>
               ))} */}
-            {/* {console.log(links)} */}
           </nav>
         </div>
         {/* {process.env.COMMERCE_SEARCH_ENABLED && (
