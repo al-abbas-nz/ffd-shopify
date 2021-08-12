@@ -4,8 +4,8 @@ const getCollectionProductsQuery = /* GraphQL */ `
   query getProductsFromCollection(
     $categoryId: ID!
     $first: Int = 250
-    $sortKey: ProductCollectionSortKeys = RELEVANCE
-    $reverse: Boolean = false
+    $sortKey: ProductCollectionSortKeys = ID
+    $reverse: Boolean = true
 
   ) {
     node(id: $categoryId) {

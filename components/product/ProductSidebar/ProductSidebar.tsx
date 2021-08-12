@@ -10,7 +10,6 @@ import {
   SelectedOptions,
 } from '../helpers'
 import usePrice from '@commerce/product/use-price'
-import ProductTag from '../ProductTag'
 
 interface ProductSidebarProps {
   product: Product

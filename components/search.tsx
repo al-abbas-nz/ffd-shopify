@@ -62,6 +62,8 @@ export default function Search({ categories, brands }: SearchPropsType) {
     }
     setActiveFilter(filter)
   }
+
+  // get the description (and images inside the description) from the Shopify categories.
   const fatFreddysDropObject = categories.find(
     (category) => category.name == "Fat Freddy's Drop"
   )
