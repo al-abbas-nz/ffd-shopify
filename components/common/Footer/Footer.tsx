@@ -113,11 +113,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
           <div>
             <span>
-              &copy; {date.getFullYear()} sup_abs, Inc. All rights reserved.
+              &copy; {date.getFullYear()} Fat Freddys Drop.
             </span>
           </div>
           <div className="flex items-center text-primary text-sm">
-            <span className="text-primary">Site by sup_abs</span>
+            <span className="text-primary"></span>
           </div>
         </div>
       </Container>
